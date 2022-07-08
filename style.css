@@ -2,10 +2,10 @@
     height: 100vh;
     display: grid;
     grid-template-areas: 
-    "header header"
-    "sidebar main";
-    grid-template-columns: 1fr 7fr;
-    grid-template-rows: 1fr 7fr;
+    "header"
+    "navbar"
+    "main";
+    grid-template-rows: 1fr 1fr 6fr;
 }
 
 .header {
@@ -13,12 +13,60 @@
     background-color: green;
 }
 
-.sidebar {
-    grid-area: sidebar;
+.navbar {
+    grid-area: navbar;
     background-color: red;
 }
 
 main {
     grid-area: main;
     background-color: blue;
+}
+
+.dropdownsflex {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    border: none;
+    padding: 30px 40px;
+    background-color: blueviolet;   
+}
+
+.dropbtn:hover {
+    background-color: purple;
+}
+
+.dropcontent {
+    background-color: aquamarine;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+}
+
+.reveal {
+    visibility: visible;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+}
+
+li:hover {
+    background-color: rgb(135, 175, 162);
+}
+
+a {
+    text-decoration: none;
 }

@@ -12,19 +12,52 @@
 <body>
     <div class="container">
         <header class="header">Menu practice</header>
-        <nav class="sidebar">
-            <ul>
-                <li class="clickMe">Click me!</li>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Projects</li>
-                <li>Friends</li>
-                <li>Settings</li>
-                <li>Help</li>
-            </ul>
+
+        <nav class="navbar">
+            <div class="dropdownsflex">
+                <div class="dropdown">
+                    <button class="dropbtn">Click Me</button>
+                    <div class="dropcontent">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Click Me</button>
+                    <div class="dropcontent">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </nav>
-        <div class="main">Main content</div>
     </div>
+
+    <div class="main">Main content</div>
+    </div>
+    <script>
+        const dropdown = document.querySelectorAll(".dropdown");
+        const dropbtn = document.querySelectorAll('.dropbtn');
+        const dropcontent = document.querySelectorAll('.dropcontent');
+        dropbtn.forEach(element => {
+            element.addEventListener('click', () => {
+                element.nextElementSibling.classList.toggle('reveal');
+            });
+        })
+    </script>
 </body>
 
 </html>
