@@ -14,50 +14,34 @@
         <header class="header">Menu practice</header>
 
         <nav class="navbar">
-            <div class="dropdownsflex">
-                <div class="dropdown">
-                    <button class="dropbtn">Click Me</button>
-                    <div class="dropcontent">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Friends</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Click Me</button>
-                    <div class="dropcontent">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Friends</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+            <ul class="dropdownsflex">
+                <li class="dropbtn">Title 1
+                    <ul class="drop-menu">
+                        <li>Home</li>
+                        <li>Profile</li>
+                        <li>Projects</li>
+                        <li>Friends</li>
+                        <li>Settings</li>
+                        <li>Help</li>
+                    </ul>
+                </li>
+                <li class="dropbtn">Title 2
+                    <ul class="drop-menu">
+                        <li>Home</li>
+                        <li>Profile</li>
+                        <li>Projects</li>
+                        <li>Friends</li>
+                        <li>Settings</li>
+                        <li>Help</li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </div>
 
     <div class="main">Main content</div>
     </div>
-    <script>
-        const dropdown = document.querySelectorAll(".dropdown");
-        const dropbtn = document.querySelectorAll('.dropbtn');
-        const dropcontent = document.querySelectorAll('.dropcontent');
-        dropbtn.forEach(element => {
-            element.addEventListener('click', () => {
-                element.nextElementSibling.classList.toggle('reveal');
-            });
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

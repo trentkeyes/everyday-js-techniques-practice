@@ -1,11 +1,11 @@
 .container {
     height: 100vh;
     display: grid;
-    grid-template-areas: 
-    "header"
-    "navbar"
-    "main";
-    grid-template-rows: 1fr 1fr 6fr;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "main";
+    grid-template-rows: 1fr auto 6fr;
 }
 
 .header {
@@ -16,41 +16,12 @@
 .navbar {
     grid-area: navbar;
     background-color: red;
+    text-align: center;
 }
 
 main {
     grid-area: main;
     background-color: blue;
-}
-
-.dropdownsflex {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    border: none;
-    padding: 30px 40px;
-    background-color: blueviolet;   
-}
-
-.dropbtn:hover {
-    background-color: purple;
-}
-
-.dropcontent {
-    background-color: aquamarine;
-    position: absolute;
-    visibility: hidden;
-    width: 100%;
-}
-
-.reveal {
-    visibility: visible;
 }
 
 ul {
@@ -61,12 +32,90 @@ ul {
 
 li {
     padding: 10px;
+    cursor: pointer;
 }
 
-li:hover {
+
+ul.drop-menu li:hover, .dropbtn:hover {
     background-color: rgb(135, 175, 162);
 }
 
-a {
-    text-decoration: none;
+
+.dropdownsflex {
+    display: flex;
+    justify-content: flex-start;
+
 }
+
+.dropdownsflex li {
+    background-color: rgb(43, 220, 226);
+    padding: 20px 40px;
+    position: relative;
+}
+
+.drop-menu {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    padding: 0;
+}
+
+ul.drop-menu li {
+    display: none;
+}
+
+ul.reveal>li {
+    display: block;
+}
+
+ul.reveal>li:nth-child(1) {
+    animation-name: menu1;
+    animation-duration: 100ms;
+    animation-delay: 50ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+ul.reveal>li:nth-child(2) {
+    animation-name: menu1;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+ul.reveal>li:nth-child(3) {
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+ul.reveal>li:nth-child(4) {
+    animation-name: menu1;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+ul.reveal>li:nth-child(5) {
+    animation-name: menu1;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+ul.reveal>li:nth-child(6) {
+    animation-name: menu1;
+    animation-duration: 600ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menu1 {
+    0% {
+        transform: rotateX(-90deg) translateY(30px);
+    }
+     100% {
+    
+       transform: rotateX(0deg) translateY(0px);
+    }
+}
+
+
