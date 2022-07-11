@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+img {
+    max-width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.719);
+}
+
+.circle {
+    padding: 10px;
+}
+
+.pic3 {
+    visibility: visible;
+}
+
+.pic2, .pic1, .pic4, .pic5 {
+    visibility: hidden;
+}
