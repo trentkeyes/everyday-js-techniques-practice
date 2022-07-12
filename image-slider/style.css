@@ -31,7 +31,7 @@ body {
     justify-content: center;
     width: 100%;
     position: absolute;
-    left: 1200px;
+    left: 130vw;
 }
 
 nav {
@@ -41,9 +41,9 @@ nav {
 }
 
 img {
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    padding: 0px 10px;
-    max-width: 1200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0px 10px;
+    max-width: 65vw;
 }
 
 button {
@@ -53,11 +53,11 @@ button {
 }
 
 button:first-child {
-    right: 800px;
+    right: 40vw;
 }
 
 button:last-child {
-    left: 800px;
+    left: 40vw;
 }
 
 .material-symbols-outlined {
@@ -71,7 +71,7 @@ button:last-child {
   padding: 10px;
 }
 
-.arrow {
+.arrow-right, .arrow-left {
     background-color: rgb(26, 26, 26);
 }
 
@@ -79,10 +79,26 @@ button:last-child {
     padding: 10px;
 }
 
-/* .pic3 {
-    display: block;
+.current {
+    color:rgb(21, 82, 133);
 }
 
-.pic2, .pic1, .pic4, .pic5 {
-    display: block;
-} */
+.pic1 {
+    transform: translate(0vw);
+}
+
+.pic2 {
+   transform: translate(-65vw);
+}
+
+.pic3 {
+    transform: translate(-130vw);
+}
+
+.pic4 {
+   transform: translate(-195vw);
+}
+
+.pic5 {
+    transform: translate(-260vw);
+ }
