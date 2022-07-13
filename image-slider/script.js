@@ -2,7 +2,7 @@ const slides = document.querySelector(".images");
 
 let currentSlide = 1;
 
-document.querySelector(".arrow-left").addEventListener("click", (e) => {
+const backwardSlide = () => {
   if (currentSlide > 1) {
     slides.classList.add(`pic${Number(currentSlide) - 1}`);
     slides.classList.remove(`pic${Number(currentSlide)}`);
@@ -14,9 +14,9 @@ document.querySelector(".arrow-left").addEventListener("click", (e) => {
       .classList.remove("current");
     currentSlide--;
   }
-});
+};
 
-document.querySelector(".arrow-right").addEventListener("click", (e) => {
+const forwardSlide = () => {
   if (currentSlide < 5) {
     slides.classList.add(`pic${Number(currentSlide) + 1}`);
     slides.classList.remove(`pic${Number(currentSlide)}`);
@@ -28,6 +28,14 @@ document.querySelector(".arrow-right").addEventListener("click", (e) => {
       .classList.remove("current");
     currentSlide++;
   }
+};
+
+document.querySelector(".arrow-left").addEventListener("click", (e) => {
+  backwardSlide();
+});
+
+document.querySelector(".arrow-right").addEventListener("click", (e) => {
+  forwardSlide();
 });
 
 document.querySelectorAll(".circle").forEach((element) => {
@@ -42,6 +50,4 @@ document.querySelectorAll(".circle").forEach((element) => {
   });
 });
 
-// add animations between changes
-
-// add highlighter to circles
+setInterval(forwardSlide, 5000);
